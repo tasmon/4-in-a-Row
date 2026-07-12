@@ -1,19 +1,20 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  background: #fafafa;
-  text-align: center;
+/* Lock app to 240x320 */
+#app {
   width: 240px;
   height: 320px;
-  overflow: hidden;
+  margin: 0 auto;
+  background: #fafafa;
   position: relative;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 header {
   background: #6200ea;
   color: white;
-  padding: 4px;
   height: 40px;
+  line-height: 40px;
 }
 
 header h2 {
@@ -23,7 +24,7 @@ header h2 {
 
 .page {
   width: 240px;
-  height: 240px; /* strict canvas space */
+  height: 240px; /* strict canvas area */
   display: none;
 }
 
@@ -52,11 +53,10 @@ footer {
   display: flex;
   justify-content: space-around;
   background: #eee;
-  padding: 4px;
+  height: 40px;
   position: absolute;
   bottom: 0;
   width: 240px;
-  height: 40px;
 }
 
 footer button {
@@ -64,6 +64,5 @@ footer button {
   border: none;
   background: #eee;
   font-size: 14px;
-  padding: 6px;
 }
 
