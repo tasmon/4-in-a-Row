@@ -1,0 +1,66 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #fafafa;
+  text-align: center;
+  width: 240px;
+  height: 320px;
+  overflow: hidden;
+}
+
+header {
+  background: #6200ea;
+  color: white;
+  padding: 4px;
+}
+
+header h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.page {
+  width: 240px;
+  height: 260px; /* space for footer */
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.md-btn {
+  background: #6200ea;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#gameCanvas {
+  display: block;
+  margin: 5px auto;
+  border: 2px solid #333;
+  background: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background: #eee;
+  padding: 4px;
+  position: absolute;
+  bottom: 0;
+  width: 240px;
+}
+
+footer button {
+  flex: 1;
+  border: none;
+  background: #eee;
+  font-size: 14px;
+  padding: 6px;
+}
+

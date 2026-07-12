@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=240, height=320, initial-scale=1.0">
+  <title>4 in a Row</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>4 in a Row</h2>
+  </header>
+
+  <!-- Home/Menu -->
+  <section id="menu" class="page active">
+    <button class="md-btn" onclick="startGame('player')">Vs Player</button>
+    <button class="md-btn" onclick="selectDifficulty()">Vs Computer</button>
+  </section>
+
+  <!-- Difficulty -->
+  <section id="difficulty" class="page">
+    <h3>Select Difficulty</h3>
+    <button class="md-btn" onclick="startGame('computer','easy')">Easy</button>
+    <button class="md-btn" onclick="startGame('computer','medium')">Medium</button>
+    <button class="md-btn" onclick="startGame('computer','hard')">Hard</button>
+  </section>
+
+  <!-- Game -->
+  <section id="gamePage" class="page">
+    <canvas id="gameCanvas" width="240" height="240"></canvas>
+    <p id="status"></p>
+    <button id="reset" class="md-btn" onclick="resetGame()">Reset</button>
+  </section>
+
+  <!-- Help -->
+  <section id="help" class="page">
+    <h3>Help</h3>
+    <p>Controls:</p>
+    <ul>
+      <li>2 = Up</li>
+      <li>4 = Left</li>
+      <li>6 = Right</li>
+      <li>8 = Down</li>
+      <li>5 = Drop disc</li>
+    </ul>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="page">
+    <h3>About</h3>
+    <p>Developer: <strong>Tasmon Islam</strong></p>
+  </section>
+
+  <!-- Bottom navigation -->
+  <footer>
+    <button onclick="showSection('menu')">Home</button>
+    <button onclick="showSection('help')">Help</button>
+    <button onclick="showSection('about')">About</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
