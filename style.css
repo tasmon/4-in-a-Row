@@ -1,4 +1,3 @@
-/* Lock app to 240x320 */
 #app {
   width: 240px;
   height: 320px;
@@ -24,7 +23,7 @@ header h2 {
 
 .page {
   width: 240px;
-  height: 240px; /* strict canvas area */
+  height: 240px;
   display: none;
 }
 
@@ -43,10 +42,28 @@ header h2 {
 }
 
 #gameCanvas {
+  width: 240px;
+  height: 180px; /* reduced height to fit */
   display: block;
   margin: 0 auto;
-  border: 2px solid #333;
+  border: none; /* removed black border */
   background: #fff;
+}
+
+#status {
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.intro {
+  font-size: 11px;
+  margin: 4px 6px;
+  color: #333;
+}
+
+.help-text p {
+  margin: 2px 0;
+  font-size: 12px;
 }
 
 footer {
