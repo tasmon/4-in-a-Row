@@ -17,5 +17,7 @@ Features include:
 4. Upload icons if required.  
 5. Save and refresh — **4-in-a-Row** will appear on your CloudPhone.
 
----
+#### License and credits
+**License**: MIT — see `LICENSE` file.  
+**Credits**: Game logic, UI, and assets in this repo by Tasmon Islam
 
