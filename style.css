@@ -43,7 +43,7 @@ header h2 {
 
 #gameCanvas {
   width: 240px;
-  height: 180px; /* reduced height to fit */
+  height: 160px; /* strict height */
   display: block;
   margin: 0 auto;
   border: none; /* removed black border */
