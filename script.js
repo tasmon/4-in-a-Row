@@ -76,7 +76,6 @@ function computerMove() {
   if (difficulty === 'easy') {
     do { col = Math.floor(Math.random()*cols); } while (board[0][col]);
   } else if (difficulty === 'medium') {
-    // prefers center columns
     const preferred = [3,2,4,1,5,0,6];
     for (let c of preferred) {
       if (!board[0][c]) { col = c; break; }
@@ -125,29 +124,4 @@ function checkWin(b) {
       if (p &&
         ((c<=3 && p===b[r][c+1] && p===b[r][c+2] && p===b[r][c+3]) ||
          (r<=2 && p===b[r+1][c] && p===b[r+2][c] && p===b[r+3][c]) ||
-         (r<=2 && c<=3 && p===b[r+1][c+1] && p===b[r+2][c+2] && p===b[r+3][c+3]) ||
-         (r<=2 && c>=3 && p===b[r+1][c-1] && p===b[r+2][c-2] && p===b[r+3][c-3]))) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-// Reset game
-function resetGame() {
-  startGame(mode,difficulty);
-}
-
-// Keypad controls
-document.addEventListener('keydown',(e)=>{
-  switch(e.key){
-    case '2': if(cursor.row>0) cursor.row--; break;
-    case '8': if(cursor.row<rows-1) cursor.row++; break;
-    case '4': if(cursor.col>0) cursor.col--; break;
-    case '6': if(cursor.col<cols-1) cursor.col++; break;
-    case '5': makeMove(cursor.col); break;
-  }
-  renderBoard();
-});
-
+         (r<=2 && c<=3 && p===b[r+1][c+1] && p===
