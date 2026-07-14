@@ -4,85 +4,101 @@ html, body {
   padding: 0;
   width: 240px;
   height: 320px;
+  overflow: hidden; /* prevent scrolling */
   background: #fafafa;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
-/* Container stretches full screen */
-.app-container {
+#app {
   width: 240px;
   height: 320px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
   background: #fff;
+  overflow: hidden; /* no scrollbars */
 }
 
-/* Pages take all space above nav */
+/* Header */
+header {
+  background: #6200ea;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+}
+
+header h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Pages */
 .page {
-  flex: 1;
-  padding: 6px;
-  text-align: center;
-  overflow-y: auto;
-}
-
-.hidden {
+  width: 240px;
+  height: 240px; /* middle section strictly sized */
   display: none;
 }
 
-.app-title {
-  font-size: 14px;
-  margin: 4px 0;
-  font-weight: 600;
+.page.active {
+  display: block;
 }
 
-select, input {
-  width: 90%;
-  margin: 4px 0;
-  padding: 4px;
-  font-size: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.primary-btn {
-  width: 90%;
-  padding: 6px;
-  margin-top: 4px;
-  background: #6200ee;
+/* Buttons */
+.md-btn {
+  background: #6200ea;
   color: white;
   border: none;
+  padding: 6px 10px;
+  margin: 5px;
   border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Game Canvas */
+#gameCanvas {
+  width: 240px;
+  height: 160px; /* reserved space so everything fits */
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: #fff;
+}
+
+/* Status + Reset area */
+#status {
+  margin: 2px 0;
   font-size: 12px;
 }
 
-.card {
-  background: #f9f9f9;
-  border-radius: 6px;
-  padding: 6px;
-  margin-top: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+#reset {
+  margin-top: 2px;
 }
 
-.result-text {
-  margin-top: 6px;
-  font-weight: bold;
+/* Help text */
+.intro {
+  font-size: 11px;
+  margin: 4px 6px;
+  color: #333;
+}
+
+.help-text p {
+  margin: 2px 0;
   font-size: 12px;
 }
 
-/* Bottom navigation fixed at bottom */
-.bottom-nav {
+/* Footer navigation */
+footer {
   display: flex;
   justify-content: space-around;
-  background: #eeeeee;
-  padding: 4px 0;
+  background: #eee;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 240px;
 }
 
-.bottom-nav button {
+footer button {
   flex: 1;
-  margin: 0 2px;
-  background: #6200ee;
-  color: #fff;
   border: none;
-  border-radius: 4px;
-  font-size: 12px;
+  background: #eee;
+  font-size: 14px;
 }
